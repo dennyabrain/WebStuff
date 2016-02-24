@@ -5,11 +5,11 @@ var bgColor = ["#C53638","#F2E8D4","#2F2718","#55442D","#C72A25"];
 $(document).ready(function(){
 	//console.log($(document).width());
 	//console.log($(document).height());
-	$("#content").width($(document).width());
-	$("#content").height($(document).height());
+	$("#content").width($(window).width());
+	$("#content").height($(window).height());
 });
 
-nx.onload=function(){
+/*nx.onload=function(){
 	dial1.on("*",function(data){
 		//console.log(data);
 	});
@@ -19,7 +19,7 @@ nx.onload=function(){
 		pingpong.feedback.value=data.value;
 		//console.log(data);
 	});
-};
+};*/
 
 var notes=["C2","G2","D3","B2","C2","G2","D3","B2","C2","G2","D3","B2","C2","G2","B2","B2"]
 var index=0;
@@ -69,8 +69,7 @@ var loop = new Tone.Loop(function(time){
 	//var index=Math.floor(Math.random()*14);
 	index=index%16;
 	//console.log(notes[index]);
-	//var release = Math.random()*4;
-	var release = dial1.val.value;
+	var release = Math.random()*4;
 	synth.triggerAttackRelease(notes[index],release);
 	synth2.triggerAttackRelease(notes[(index+3)%16],release+2);
 	synth3.triggerAttackRelease(notes[(index+2)%16],release+1);
