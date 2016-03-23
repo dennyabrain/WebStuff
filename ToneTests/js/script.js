@@ -74,7 +74,7 @@ var loop = new Tone.Loop(function(time){
 	synth2.triggerAttackRelease(notes[(index+3)%16],release+2);
 	synth3.triggerAttackRelease(notes[(index+2)%16],release+1);
 	index+=1;
-	console.log(Math.floor(Math.random()*6));
+	
 	$("#content").css({
 		"background-color":bgColor[Math.floor(Math.random()*6)]
 	});
