@@ -33,22 +33,36 @@ function greet(){
 	fill(255,255,255);
 	//text(input.value(),50,100);
 	//text(input.value(),50,100);
-	textSize(28);
+	textSize(38);
 
 	console.log(textWidth(name));
 	
 	
 	var test=name.split(" ");
 	console.log(test);
-	var blockWidth=50;
+	var blockWidth=70;
 	var yIndex=200
+	var chars=0;
 	for(i=0;i<test.length;i++){	
-		blockWidth+=textWidth(test[i]+' ');
+		/*blockWidth+=textWidth(test[i]+' ');
 		if(blockWidth<600){
 			text(test[i],blockWidth,yIndex);
 		}else{
 			blockWidth=0;
 			yIndex+=40;
+		}*/
+		console.log("hi");
+		chars+=test[i].length;
+		if(chars<30){
+			console.log("hi2");
+			text(test[i],blockWidth,yIndex);
+			blockWidth+=textWidth(test[i]+' ');
+		}else{
+			chars=0;
+			yIndex+=40;
+			blockWidth=70;
+			text(test[i],blockWidth,yIndex);
+			blockWidth+=textWidth(test[i]+' ');
 		}
 	}
 }
