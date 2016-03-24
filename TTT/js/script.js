@@ -5,6 +5,7 @@ function setup(){
 	cnv=createCanvas(800, 800);
 	background(0);
 	textSize(28);
+	textFont('Calibri');
 	fill(255,255,255);
 	text("-ded-",50,50);
 	text("ttatti.com",600,50);
