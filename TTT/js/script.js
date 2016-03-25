@@ -64,6 +64,7 @@ function test(){
 function greet(){
 	background(0);
 	setTemplate();
+	putName();
 	tale=textArea.value();
 	//console.log(tale);
 	numOfLines=calcNumOfLines(tale);
