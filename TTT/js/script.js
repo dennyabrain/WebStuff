@@ -2,7 +2,7 @@ var cnv;
 var taleWidth=700;
 
 function setup(){
-	cnv=createCanvas(800, 800);
+	cnv=createCanvas(800, 600);
 	background(0);
 	textSize(28);
 	textFont('Calibri');
@@ -15,24 +15,34 @@ function setup(){
 	//input = createInput();
   	//input.position(20, 650);
 
-  	button = createButton('Generate Image');
-  	button.position(540, 650);
-  	button.mousePressed(greet);
-  	textAlign(LEFT);
-  	button2 = createButton('Download Image');
-  	button2.position(540, 685);
-  	button2.mousePressed(saveImg);
-  	fill(255);
-
   	textArea = createElement('textarea','your tatti tale');
-  	textArea.position(20,650);
+  	//textArea.position(20,650);
   	textArea.style('width','500px');
-  	textArea.style('height','50px');
+  	textArea.style('height','80px');
+  	textArea.style('background-color','#2E4057');
+  	textArea.style('color','#CCF5AC');
+  	textArea.style('border','none');
+  	textArea.style('font-size','1.2em');
   	textAreaName = createElement('textArea','your name');
-  	textAreaName.position(20,730);
+  	//textAreaName.position(20,750);
   	textAreaName.style('width','300');
   	textAreaName.style('height','25px');
-
+  	textAreaName.style('width','500px');
+  	textAreaName.style('height','20px');
+  	textAreaName.style('background-color','#2E4057');
+  	textAreaName.style('color','#CCF5AC');
+  	textAreaName.style('border','none');
+  	textAreaName.style('font-size','1.2em');
+  	button = createButton('Generate Image');
+  	//button.position(540, 650);
+  	button.mousePressed(greet);
+  	button.class('myButton');
+  	textAlign(LEFT);
+  	button2 = createButton('Download Image');
+  	//button2.position(540, 700);
+  	button2.class('myButton');
+  	button2.mousePressed(saveImg);
+  	fill(255);
 }
 
 function draw(){

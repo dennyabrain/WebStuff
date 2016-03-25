@@ -1,3 +1,27 @@
 #defaultCanvas0{
 	margin:0 auto;
 }
+
+body{
+	background-color:#BFCDE0;
+	width:960px;
+	margin:0 auto;
+	text-align:center;
+}
+
+.myButton{
+	
+	background-color:#F6F740;
+	color:#2E4057;
+	border:none;
+	font-size:2em;
+	width:300px;
+	display:block;
+	margin:0.2em auto 0 auto;
+}
+.myButton:hover{
+	border: none;
+    background:#DA4167;
+    box-shadow: 0px 0px 1px #777;
+    cursor:pointer;
+}
