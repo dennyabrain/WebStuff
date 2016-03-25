@@ -23,6 +23,7 @@ function setup(){
   	textArea.style('color','#CCF5AC');
   	textArea.style('border','none');
   	textArea.style('font-size','1.2em');
+  	textArea.input(greet);
   	textAreaName = createElement('textArea','your name');
   	//textAreaName.position(20,750);
   	textAreaName.style('width','300');
@@ -33,10 +34,11 @@ function setup(){
   	textAreaName.style('color','#CCF5AC');
   	textAreaName.style('border','none');
   	textAreaName.style('font-size','1.2em');
-  	button = createButton('Generate Image');
+  	textAreaName.input(putName);
+  	//button = createButton('Generate Image');
   	//button.position(540, 650);
-  	button.mousePressed(greet);
-  	button.class('myButton');
+  	//button.mousePressed(greet);
+  	//button.class('myButton');
   	textAlign(LEFT);
   	button2 = createButton('Download Image');
   	//button2.position(540, 700);
@@ -49,7 +51,13 @@ function draw(){
 	//ellipse(50, 50, 80, 80);
 }
 
+function test(){
+	console.log('typing');
+}
+
 function greet(){
+	background(0);
+	setTemplate();
 	tale=textArea.value();
 	//console.log(tale);
 	numOfLines=calcNumOfLines(tale);
@@ -123,9 +131,6 @@ function greet(){
 			blockWidth+=textWidth(test[i]+' ');
 		}
 	}
-	textSize(28);
-	var userName=textAreaName.value();
-	text('by '+userName,750-textWidth('by '+userName),550);
 }
 
 function saveImg(){
@@ -166,4 +171,23 @@ function calcNumOfLines(text){
 		}
 	}
 	return numOfLines+1;
+}
+
+function setTemplate(){
+	textSize(28);
+	textFont('Calibri');
+	fill(255,255,255);
+	text("-ded-",50,50);
+	text("ttatti.com",600,50);
+	text("#tatti",50,550);
+	text("terribly tatti tales",270,550);
+}
+
+function putName(){
+	background(0);
+	setTemplate();
+	greet();
+	textSize(28);
+	var userName=textAreaName.value();
+	text('by '+userName,750-textWidth('by '+userName),550);
 }
