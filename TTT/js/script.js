@@ -77,10 +77,10 @@ function greet(){
 		//console.log("hi");
 		if(test[i].indexOf('\n')==-1){
 			chars+=test[i].length;
-			console.log('length of text is : '+chars);
+			//console.log('length of text is : '+chars);
 		}else{
 			chars+=test[i].indexOf('\n')-2;
-			console.log('length of newline text is : '+chars);
+			//console.log('length of newline text is : '+chars);
 		}
 		
 		if(chars<30){
@@ -103,6 +103,19 @@ function greet(){
 			text(test[i],blockWidth,yIndex);
 			blockWidth+=textWidth(test[i]+' ');
 		}else{
+			if(test[i].indexOf('\n')!=-1){
+				console.log('text i is : '+test[i]);
+				console.log('contains newline');
+				tempText=test[i].split('\n');
+				console.log('broken text is : '+tempText);
+				text(tempText[0],blockWidth,yIndex);
+				blockWidth=50;
+				yIndex+=40;
+				chars=0;
+				text(tempText[1],blockWidth,yIndex);
+				blockWidth+=textWidth(tempText[1]+' ');
+				continue;
+			}
 			chars=0;
 			yIndex+=40;
 			blockWidth=50;
