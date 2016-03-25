@@ -24,6 +24,9 @@ function setup(){
   	textArea.style('border','none');
   	textArea.style('font-size','1.2em');
   	textArea.input(greet);
+  	textArea.mousePressed(function(){
+  		textArea.value('');
+  	})
   	textAreaName = createElement('textArea','your name');
   	//textAreaName.position(20,750);
   	textAreaName.style('width','300');
@@ -34,6 +37,9 @@ function setup(){
   	textAreaName.style('color','#CCF5AC');
   	textAreaName.style('border','none');
   	textAreaName.style('font-size','1.2em');
+  	textAreaName.mousePressed(function(){
+  		textAreaName.value('');
+  	})
   	textAreaName.input(putName);
   	//button = createButton('Generate Image');
   	//button.position(540, 650);
