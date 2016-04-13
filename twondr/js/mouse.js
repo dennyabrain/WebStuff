@@ -1,4 +1,6 @@
 function Mouse(){
+	this.defaultX=0.1*displayWidth;
+	this.defaultY=0.05*displayHeight;
 	this.x=0;
 	this.y=0;
 	this.onClickX=0;

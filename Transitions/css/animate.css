@@ -1,0 +1,37 @@
+body {
+  margin: 0 0 0 0;
+  background-color: #FF331F;
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s ease; }
+
+.page, #pg1, #pg2, .motion {
+  width: 80vw;
+  height: 100vh;
+  padding: 2em;
+  color: #FBFBFF; }
+
+#pg1 {
+  background-color: #3626A7; }
+
+#pg2 {
+  background-color: #40FD65; }
+
+.hidden {
+  display: none; }
+
+.motion {
+  background-color: #40FD65;
+  animation-duration: 1s;
+  animation-name: test;
+  animation-timing-function: ease; }
+
+@keyframes test {
+  from {
+    display: none;
+    transform: translate(0px, 100vh); }
+  to {
+    display: block;
+    transform: translate(0px, 0px); } }
+
+/*# sourceMappingURL=animate.css.map */

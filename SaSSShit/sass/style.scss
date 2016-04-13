@@ -1,0 +1,59 @@
+$navFont : Helvetica, sans-serif;
+$headlineFont: Georgia, serif;
+$textFont: Georgia, serif;
+$red : #FF331F;
+$black : #1C1D21;
+$white : #FBFBFF;
+$green : #40FD65;
+$blue : #3626A7;
+
+@import 'nav';
+@import 'textArea';
+@import '_button';
+
+html{
+	font-size:100%;
+}
+
+body{
+	background-color:$white;
+	font-size:2rem;
+	color:$black;
+	width:80%;
+	margin:0 auto;
+}
+
+.container{
+	width:50%;
+	-webkit-column-count: 3;
+	column-count:3;
+}
+
+#headline{
+	width:80%;
+	font-family:$headlineFont;
+}
+
+//Samsung Galaxy s5 
+@media screen 
+and (device-width:360px)
+and (device-height:640px)
+and (-webkit-device-pixel-ratio:3){
+	h1{
+		font-size:5rem;
+	}
+
+	#nav{
+		li{
+			font-size:4rem;
+			//padding-top:2rem;
+		}
+	}
+	.container{
+		width:100%;
+		-webkit-column-count: 1;
+		column-count:1;
+		text-align:center;
+	}
+}
+

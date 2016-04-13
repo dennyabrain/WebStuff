@@ -1,0 +1,24 @@
+#text{
+	width:100%;
+}
+
+#textField{
+	width:50%;
+	height:10rem;
+	font-size:2rem;
+	font-family:$navFont;
+}
+
+@media screen 
+and (device-width:360px)
+and (device-height:640px)
+and (-webkit-device-pixel-ratio:3){
+
+	#text{
+		width:100%;
+	}
+	#textField{
+		width:100%;
+		height:40rem;
+	}
+}

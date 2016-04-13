@@ -1,0 +1,58 @@
+$navFont : Helvetica, sans-serif;
+$headlineFont: Georgia, serif;
+$textFont: Georgia, serif;
+$red : #FF331F;
+$black : #1C1D21;
+$white : #FBFBFF;
+$green : #40FD65;
+$blue : #3626A7;
+
+body{
+	margin:0 0 0 0;
+	background-color:$red;
+	width:100vw;
+	height:100vh;
+	transition:all 1s ease;
+}
+
+.page{
+	width:80vw;
+	height:100vh;
+	padding:2em;
+	color:$white;
+}
+
+#pg1{
+	@extend .page;
+	background-color:$blue;
+}
+
+
+#pg2{
+	@extend .page;
+	background-color:$green;
+}
+
+.hidden{
+	display:none;
+}
+
+.motion{
+	@extend .page;
+	background-color:$green;
+	animation-duration:1s;
+	animation-name:test;
+	animation-timing-function: ease;
+}
+
+@keyframes test{
+	from {
+		display:none;
+	     transform: translate(0px,100vh);
+	}
+
+	to {
+		display:block;
+		transform: translate(0px,0px);
+	}
+}

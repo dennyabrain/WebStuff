@@ -1,0 +1,98 @@
+#nav {
+  font-family: Helvetica, sans-serif;
+  color: #FF331F; }
+  #nav ul {
+    list-style: none;
+    margin: 2rem 0 0 0;
+    padding: 0; }
+  #nav li {
+    display: inline;
+    padding-right: 1rem; }
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  #nav li {
+    font-size: 0.2em; } }
+#text {
+  width: 100%; }
+
+#textField {
+  width: 50%;
+  height: 10rem;
+  font-size: 2rem;
+  font-family: Helvetica, sans-serif; }
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  #text {
+    width: 100%; }
+
+  #textField {
+    width: 100%;
+    height: 40rem; } }
+.button, .submit, .go {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: #40FD65; }
+
+.submit {
+  background-color: #FF331F; }
+
+.go {
+  background-color: #3626A7; }
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  .button, .submit, .go {
+    width: 100%;
+    height: 6rem;
+    border-radius: 0.5rem;
+    background-color: #40FD65;
+    font-size: 2em; }
+
+  .submit {
+    width: 100%;
+    height: 6rem;
+    border-radius: 0.5rem;
+    background-color: #40FD65;
+    font-size: 2em;
+    background-color: #FF331F; }
+
+  .go {
+    width: 100%;
+    height: 6rem;
+    border-radius: 0.5rem;
+    background-color: #40FD65;
+    font-size: 2em;
+    background-color: #3626A7; } }
+html {
+  font-size: 100%; }
+
+body {
+  background-color: #FBFBFF;
+  font-size: 2rem;
+  color: #1C1D21;
+  width: 80%;
+  margin: 0 auto; }
+
+.container {
+  width: 50%;
+  -webkit-column-count: 3;
+  column-count: 3; }
+
+#headline {
+  width: 80%;
+  font-family: Georgia, serif; }
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  h1 {
+    font-size: 5rem; }
+
+  #nav li {
+    font-size: 4rem; }
+
+  .container {
+    width: 100%;
+    -webkit-column-count: 1;
+    column-count: 1;
+    text-align: center; } }
+
+/*# sourceMappingURL=style.css.map */

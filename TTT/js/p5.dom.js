@@ -456,30 +456,25 @@
    *
    * function myCheckedEvent() {
    *   if (this.checked()) {
-   *     console.log("Checking!");
-   *   } else {
    *     console.log("Unchecking!");
+   *   } else {
+   *     console.log("Checking!");
    *   }
-   * }
+   *
    * </code></div>
    */
   p5.prototype.createCheckbox = function() {
-    var elt = document.createElement('div');
-    var checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    elt.appendChild(checkbox);
+    var elt = document.createElement('input');
+    elt.type = 'checkbox';
     //checkbox must be wrapped in p5.Element before label so that label appears after
     var self = addElement(elt, this);
     self.checked = function(){
-      var cb = self.elt.getElementsByTagName('input')[0];
-      if (cb) {
-        if (arguments.length === 0){
-          return cb.checked;
-        }else if(arguments[0]){
-          cb.checked = true;
-        }else{
-          cb.checked = false;
-        }
+      if (arguments.length === 0){
+        return self.elt.checked;
+      }else if(arguments[0]){
+        self.elt.checked = true;
+      }else{
+        self.elt.checked = false;
       }
       return self;
     };
@@ -490,14 +485,14 @@
     if (arguments[0]){
       var ran = Math.random().toString(36).slice(2);
       var label = document.createElement('label');
-      checkbox.setAttribute('id', ran);
+      elt.setAttribute('id', ran);
       label.htmlFor = ran;
       self.value(arguments[0]);
       label.appendChild(document.createTextNode(arguments[0]));
-      elt.appendChild(label);
+      addElement(label, this);
     }
     if (arguments[1]){
-      checkbox.checked = true;
+      elt.checked = true;
     }
     return self;
   };
@@ -773,9 +768,6 @@
     elt.addEventListener('loadedmetadata', function() {
       c.width = elt.videoWidth;
       c.height = elt.videoHeight;
-      // set elt width and height if not set
-      if (c.elt.width === 0) c.elt.width = elt.videoWidth;
-      if (c.elt.height === 0) c.elt.height = elt.videoHeight;
       c.loadedmetadata = true;
     });
 
@@ -846,17 +838,13 @@
                             navigator.msGetUserMedia;
 
   /**
-   * <p>Creates a new &lt;video&gt; element that contains the audio/video feed
-   * from a webcam. This can be drawn onto the canvas using video().</p>
-   * <p>More specific properties of the feed can be passing in a Constraints object.
+   * Creates a new &lt;video&gt; element that contains the audio/video feed
+   * from a webcam. This can be drawn onto the canvas using video(). More
+   * specific properties of the stream can be passing in a Constraints object.
    * See the
-   * <a href="http://w3c.github.io/mediacapture-main/getusermedia.html#media-track-constraints"> W3C
+   * <a href="http://w3c.github.io/mediacapture-main/getusermedia.html">W3C
    * spec</a> for possible properties. Note that not all of these are supported
-   * by all browsers.</p>
-   * <p>Security note: A new browser security specification requires that getUserMedia, 
-   * which is behind createCapture(), only works when you're running the code locally, 
-   * or on HTTPS. Learn more <a href="http://stackoverflow.com/questions/34197653/getusermedia-in-chrome-47-without-using-https">here</a>
-   * and <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia">here</a>.</p>
+   * by all browsers.
    *
    * @method createCapture
    * @param  {String|Constant|Object}   type type of capture, either VIDEO or
