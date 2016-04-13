@@ -5,3 +5,10 @@ body{
 .container-fluid img{
 	width:100%;
 }
+
+h1{
+	color:#5051F9;
+	text-transform:uppercase;
+	font-family: 'Slabo 27px', serif;
+	font-family: 'Roboto Slab', serif;
+}
