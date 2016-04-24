@@ -1,0 +1,29 @@
++ hello jordan
+- hi 
+- hi there
+- yo 
+- such a lovely day today{weight=5}
+
++ my name is _
+- it's nice to meet you <star>
+- <star>, nice to meet you
+- I feel happy already, talking to you <star>
+
++ (what is your name|who are you|who is this)
+- My name is jordan.
+
++ what is your (home|office|cell) [phone] number
+- My <star> number is: 1 (888) 555-5555.
+
++ i do not have [any] friends
+- Aw. I'll be your friend!
+
++ am i [a] (boy|guy|male) or [a] (girl|female)
+- I can't tell with any degree of certainty whether you are a <star1> or <star2>
+
++ (lets meet?|wanna meet? i want to meet you| we should meet)
+- I would love to! Can i see you in Union Square park in 10 minutes?
+
+
+
+
